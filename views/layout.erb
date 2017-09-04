@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+      <header>
+        <% require_relative("../helpers/firstcard.rb") %>
+        <h2><%= FirstCard.random() %></h2>
+
+      </header>
+    <%= yield %>
+    <footer>
+      <% require_relative("../helpers/secondcard.rb") %>
+      <hr>
+      <p><%= Secondcard.random_secondcard() %></p>
+    </footer>
+  </body>
+
+</html>
